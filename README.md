@@ -25,31 +25,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
       [{:slack, "~> 0.0.10"}]
     end
     ```
-
-## Todo
-
-- [x] `Slack.API`
-- [x] `Slack.Auth`
-- [x] `Slack.Bot`
-- [x] `Slack.Channel`
-- [x] `Slack.Chat`
-- [x] `Slack.DND`
-- [x] `Slack.Emoji`
-- [x] `Slack.File.Comment`
-- [x] `Slack.File`
-- [x] `Slack.Group`
-- [x] `Slack.IM`
-- [x] `Slack.MPIM`
-- [x] `Slack.OAuth`
-- [x] `Slack.Pin`
-- [x] `Slack.Reaction`
-- [x] `Slack.Reminder`
-- [x] `Slack.RTM`
-- [x] `Slack.Search`
-- [x] `Slack.Star`
-- [x] `Slack.Team`
-- [x] `Slack.Team.Profile`
-- [x] `Slack.UserGroup`
-- [x] `Slack.UserGroup.User`
-- [x] `Slack.User`
-- [x] `Slack.User.Profile`
