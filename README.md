@@ -45,8 +45,11 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [x] `Slack.Reaction`
 - [x] `Slack.Reminder`
 - [x] `Slack.RTM`
-- [ ] `Slack.Search`
-- [ ] `Slack.Star`
+- [x] `Slack.Search`
+- [x] `Slack.Star`
 - [ ] `Slack.Team`
 - [ ] `Slack.Team.Profile`
 - [ ] `Slack.UserGroup`
+- [ ] `Slack.UserGroup.User`
+- [ ] `Slack.User`
+- [ ] `Slack.User.Profile`
