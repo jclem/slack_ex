@@ -22,7 +22,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
     ```elixir
     def deps do
-      [{:slack, "~> 0.0.8"}]
+      [{:slack, "~> 0.0.9"}]
     end
     ```
 
@@ -47,9 +47,9 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [x] `Slack.RTM`
 - [x] `Slack.Search`
 - [x] `Slack.Star`
-- [ ] `Slack.Team`
-- [ ] `Slack.Team.Profile`
-- [ ] `Slack.UserGroup`
-- [ ] `Slack.UserGroup.User`
-- [ ] `Slack.User`
-- [ ] `Slack.User.Profile`
+- [x] `Slack.Team`
+- [x] `Slack.Team.Profile`
+- [x] `Slack.UserGroup`
+- [x] `Slack.UserGroup.User`
+- [x] `Slack.User`
+- [x] `Slack.User.Profile`
