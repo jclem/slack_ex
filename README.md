@@ -44,7 +44,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [x] `Slack.Pin`
 - [x] `Slack.Reaction`
 - [x] `Slack.Reminder`
-- [ ] `Slack.RTM`
+- [x] `Slack.RTM`
 - [ ] `Slack.Search`
 - [ ] `Slack.Star`
 - [ ] `Slack.Team`
