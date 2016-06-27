@@ -35,7 +35,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [x] `Slack.Chat`
 - [x] `Slack.DND`
 - [x] `Slack.Emoji`
-- [ ] `Slack.File.Comment`
+- [x] `Slack.File.Comment`
 - [ ] `Slack.File`
 - [ ] `Slack.Group`
 - [ ] `Slack.IM`
