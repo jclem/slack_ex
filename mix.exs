@@ -3,6 +3,7 @@ defmodule Slack.Mixfile do
 
   def project do
     [app: :slack,
+     description: "A client for the Slack API",
      version: "0.0.1",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
