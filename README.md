@@ -22,7 +22,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
     ```elixir
     def deps do
-      [{:slack, "~> 0.0.7"}]
+      [{:slack, "~> 0.0.8"}]
     end
     ```
 
@@ -39,9 +39,9 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [x] `Slack.File`
 - [x] `Slack.Group`
 - [x] `Slack.IM`
-- [ ] `Slack.MPIM`
+- [x] `Slack.MPIM`
 - [x] `Slack.OAuth`
-- [ ] `Slack.Pin`
+- [x] `Slack.Pin`
 - [ ] `Slack.Reaction`
 - [ ] `Slack.Reminder`
 - [ ] `Slack.RTM`
