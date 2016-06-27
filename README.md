@@ -33,7 +33,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [x] `Slack.Bot`
 - [x] `Slack.Channel`
 - [x] `Slack.Chat`
-- [ ] `Slack.DND`
+- [x] `Slack.DND`
 - [ ] `Slack.Emoji`
 - [ ] `Slack.File.Comment`
 - [ ] `Slack.File`
