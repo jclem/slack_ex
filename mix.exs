@@ -6,6 +6,7 @@ defmodule Slack.Mixfile do
      description: "A client for the Slack API",
      version: "0.0.1",
      package: [
+       name: :slack_ex,
        licenses: ["MIT"],
        maintainers: ["Jonathan Clem <jonathan@jclem.net>"],
        links: %{"GitHub" => "https://github.com/jclem/slack_ex",
