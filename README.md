@@ -43,7 +43,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [x] `Slack.OAuth`
 - [x] `Slack.Pin`
 - [x] `Slack.Reaction`
-- [ ] `Slack.Reminder`
+- [x] `Slack.Reminder`
 - [ ] `Slack.RTM`
 - [ ] `Slack.Search`
 - [ ] `Slack.Star`
