@@ -5,6 +5,26 @@ defmodule Slack.Request do
     end
   end
 
+  defmacro defget(method) do
+    quote do
+      defrequest unquote(method)(client, query \\ []) do
+        params = query |> Keyword.put(:token, client.token)
+        Slack.get "#{@base}.#{unquote(method)}", [], params: params
+      end
+    end
+  end
+
+  defmacro defpost(method) do
+    quote do
+      defrequest unquote(method)(client, body \\ []) do
+        Slack.post "#{@base}.#{unquote(method)}",
+                   {:form, body},
+                   [],
+                   params: [token: client.token]
+      end
+    end
+  end
+
   defmacro defrequest(signature, do: body) do
     quote do
       def unquote(signature) do
