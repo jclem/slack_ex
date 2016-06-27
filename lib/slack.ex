@@ -1,0 +1,2 @@
+defmodule Slack do
+end
