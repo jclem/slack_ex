@@ -39,6 +39,7 @@ defmodule Slack.Mixfile do
   defp deps do
     [{:httpoison, "~> 0.9.0"},
      {:poison, "~> 2.2.0"},
+     {:gun, "~> 1.0.0-pre.1"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
