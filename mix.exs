@@ -1,16 +1,18 @@
 defmodule Slack.Mixfile do
   use Mix.Project
 
+  @github_url "https://github.com/jclem/slack_ex"
+  @version "0.0.2"
+
   def project do
     [app: :slack,
      description: "A client for the Slack API",
-     version: "0.0.1",
-     package: [
-       name: :slack_ex,
-       licenses: ["MIT"],
-       maintainers: ["Jonathan Clem <jonathan@jclem.net>"],
-       links: %{"GitHub" => "https://github.com/jclem/slack_ex",
-                "Docs" => "https://hexdocs.pm/slack_ex"}],
+     version: @version,
+     package: package,
+     name: "Slack",
+     homepage_url: @github_url,
+     source_url: @github_url,
+     docs: [extras: ["README.md", "LICENSE.md"]],
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -37,5 +39,12 @@ defmodule Slack.Mixfile do
     [{:httpoison, "~> 0.9.0"},
      {:poison, "~> 2.2.0"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
+  end
+
+  defp package do
+    [name: :slack_ex,
+     licenses: ["MIT"],
+     maintainers: ["Jonathan Clem <jonathan@jclem.net>"],
+     links: %{"GitHub" => @github_url}]
   end
 end
