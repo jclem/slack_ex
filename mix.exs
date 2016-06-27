@@ -16,6 +16,7 @@ defmodule Slack.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     dialyzer: [plt_add_deps: true],
      deps: deps()]
   end
 
