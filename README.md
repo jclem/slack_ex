@@ -26,14 +26,6 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     end
     ```
 
-  2. Ensure `slack` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:slack]]
-    end
-    ```
-
 ## Todo
 
 - [x] `Slack.API`
