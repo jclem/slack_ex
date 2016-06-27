@@ -36,6 +36,6 @@ defmodule Slack.Auth do
   @spec test(Slack.Client.t, Keyword.t) :: Slack.response
   defrequest test(client, body \\ []) do
     body = body |> Keyword.put(:token, client.token)
-    Slack.post "#{@base}.test", {:form, body}
+    Slack.get "#{@base}.test", {:form, body}
   end
 end
