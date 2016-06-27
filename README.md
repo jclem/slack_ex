@@ -4,12 +4,13 @@ A client for the Slack API.
 
 ## Usage
 
-All of the API methods work by first creating a Slack client
+Most of the API methods work by first creating a Slack client
 (`Slack.client(token)`) and then passing it in to an API call. Note that a
 `Slack.Client` is only a convenience wrapper for a map with a `:token` key.
 
 ```elixir
-Slack.client(token)
+token
+|> Slack.client
 |> Slack.Channel.create(name: "mynewchannel")
 ```
 
@@ -35,6 +36,11 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 ## Todo
 
+- [x] `Slack.API`
+- [x] `Slack.Auth`
+- [x] `Slack.Bot`
+- [x] `Slack.Channel`
+- [x] `Slack.Chat`
 - [ ] `Slack.DND`
 - [ ] `Slack.Emoji`
 - [ ] `Slack.File.Comment`
@@ -42,7 +48,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 - [ ] `Slack.Group`
 - [ ] `Slack.IM`
 - [ ] `Slack.MPIM`
-- [ ] `Slack.OAuth`
+- [x] `Slack.OAuth`
 - [ ] `Slack.Pin`
 - [ ] `Slack.Reaction`
 - [ ] `Slack.Reminder`
