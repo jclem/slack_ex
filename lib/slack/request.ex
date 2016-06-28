@@ -37,8 +37,8 @@ defmodule Slack.Request do
   Define a method `method` that makes a request (the block must return a call
   to an HTTPoison request method).
 
-  The return of the request will be pattern matched against Slack's standard
-  `%{"ok" => true}` message format, and will return `{:ok, response}` when
+  The body of a successful response will be pattern matched against Slack's
+  standard `%{"ok" => true}` message format, and will return `{:ok, body}` when
   the body matches `%{"ok" => true}`, or `{:error, response}` otherwise.
 
   In the case of an actual failed request, `{:error, HTTPoison.Error.t}` will be
@@ -49,7 +49,7 @@ defmodule Slack.Request do
       def unquote(signature) do
         case unquote(body) do
           {:ok, response = %HTTPoison.Response{body: %{"ok" => true}}} ->
-            {:ok, response}
+            {:ok, response.body}
           {:ok, response} ->
             {:error, response}
           {:error, error} ->

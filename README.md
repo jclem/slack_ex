@@ -9,9 +9,10 @@ Most of the API methods work by first creating a Slack client
 `Slack.Client` is only a convenience wrapper for a map with a `:token` key.
 
 ```elixir
-token
-|> Slack.client
-|> Slack.Channel.create(name: "mynewchannel")
+{:ok, %{"channel" => channel}} =
+  token
+  |> Slack.client
+  |> Slack.Channel.create(name: "mynewchannel")
 ```
 
 ## Installation
@@ -22,6 +23,6 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
     ```elixir
     def deps do
-      [{:slack_ex, "~> 0.0.10"}]
+      [{:slack_ex, "~> 0.0.11"}]
     end
     ```

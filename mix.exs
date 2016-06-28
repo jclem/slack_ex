@@ -2,7 +2,7 @@ defmodule Slack.Mixfile do
   use Mix.Project
 
   @github_url "https://github.com/jclem/slack_ex"
-  @version "0.0.10"
+  @version "0.0.11"
 
   def project do
     [app: :slack,

@@ -1,7 +1,7 @@
 defmodule Slack do
   use HTTPoison.Base
 
-  @type response :: {:ok, HTTPoison.Response.t} | {:error, HTTPoison.Response.t} | {:error, HTTPoison.Error.t}
+  @type response :: {:ok, map} | {:error, HTTPoison.Response.t} | {:error, HTTPoison.Error.t}
 
   @endpoint "https://slack.com/api"
 
