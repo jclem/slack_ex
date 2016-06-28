@@ -2,7 +2,7 @@ defmodule Slack.Mixfile do
   use Mix.Project
 
   @github_url "https://github.com/jclem/slack_ex"
-  @version "0.0.12"
+  @version "0.0.13"
 
   def project do
     [app: :slack,
@@ -12,7 +12,7 @@ defmodule Slack.Mixfile do
      name: "Slack",
      homepage_url: @github_url,
      source_url: @github_url,
-     docs: [extras: ["README.md", "LICENSE.md"]],
+     docs: docs,
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -25,6 +25,12 @@ defmodule Slack.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger, :httpoison]]
+  end
+
+  defp docs do
+    [extras: ["LICENSE.md"],
+     main: "Slack",
+     source_ref: "v#{@version}"]
   end
 
   # Dependencies can be Hex packages:
