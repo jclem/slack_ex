@@ -17,8 +17,6 @@ Most of the API methods work by first creating a Slack client
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
   1. Add `slack` to your list of dependencies in `mix.exs`:
 
     ```elixir
