@@ -1,4 +1,4 @@
-# Slack
+# SlackEx
 
 A client for the Slack API.
 
