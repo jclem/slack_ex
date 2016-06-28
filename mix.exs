@@ -2,7 +2,7 @@ defmodule Slack.Mixfile do
   use Mix.Project
 
   @github_url "https://github.com/jclem/slack_ex"
-  @version "0.0.13"
+  @version "0.0.14"
 
   def project do
     [app: :slack,
@@ -28,7 +28,7 @@ defmodule Slack.Mixfile do
   end
 
   defp docs do
-    [extras: ["LICENSE.md"],
+    [extras: ~w(CONTRIBUTING.md LICENSE.md),
      main: "Slack",
      source_ref: "v#{@version}"]
   end
