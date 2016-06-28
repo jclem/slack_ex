@@ -1,6 +1,6 @@
 defmodule Slack.Reaction do
   @moduledoc """
-  Functions for working with reactions to messages
+  Functions for working with reactions to messages 👍
   """
 
   @base "reactions"
