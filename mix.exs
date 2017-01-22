@@ -2,18 +2,18 @@ defmodule Slack.Mixfile do
   use Mix.Project
 
   @github_url "https://github.com/jclem/slack_ex"
-  @version "0.0.14"
+  @version "0.1.0"
 
   def project do
-    [app: :slack,
+    [app: :slack_ex,
      description: "A client for the Slack API",
      version: @version,
-     package: package,
+     package: package(),
      name: "Slack",
      homepage_url: @github_url,
      source_url: @github_url,
-     docs: docs,
-     elixir: "~> 1.3",
+     docs: docs(),
+     elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      dialyzer: [plt_add_deps: true],
@@ -24,7 +24,7 @@ defmodule Slack.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison]]
+    [extra_applications: []]
   end
 
   defp docs do
@@ -43,8 +43,8 @@ defmodule Slack.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.9.0"},
-     {:poison, "~> 2.2.0"},
+    [{:httpoison, "~> 0.11"},
+     {:poison, "~> 3.1"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
