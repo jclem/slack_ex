@@ -17,6 +17,6 @@ defmodule Slack.Emoji do
       Slack.client(token)
       |> Slack.Emoji.list
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 end

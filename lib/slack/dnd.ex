@@ -17,7 +17,7 @@ defmodule Slack.DND do
       Slack.client(token)
       |> Slack.DND.endDnd
   """
-  @spec endDnd(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec endDnd(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :endDnd
 
   @doc """
@@ -30,7 +30,7 @@ defmodule Slack.DND do
       Slack.client(token)
       |> Slack.DND.endSnooze
   """
-  @spec endSnooze(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec endSnooze(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :endSnooze
 
   @doc """
@@ -43,7 +43,7 @@ defmodule Slack.DND do
       Slack.client(token)
       |> Slack.DND.info(user: "U1234")
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 
   @doc """
@@ -56,7 +56,7 @@ defmodule Slack.DND do
       Slack.client(token)
       |> Slack.DND.setSnooze(num_minutes: 30)
   """
-  @spec setSnooze(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec setSnooze(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :setSnooze
 
   @doc """
@@ -69,6 +69,6 @@ defmodule Slack.DND do
       Slack.client(token)
       |> Slack.DND.teamInfo
   """
-  @spec teamInfo(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec teamInfo(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :teamInfo
 end

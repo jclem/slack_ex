@@ -17,7 +17,7 @@ defmodule Slack.IM do
       Slack.client(token)
       |> Slack.IM.close(channel: "D1234567890")
   """
-  @spec close(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec close(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :close
 
   @doc """
@@ -30,7 +30,7 @@ defmodule Slack.IM do
       Slack.client(token)
       |> Slack.IM.history(channel: "D1234567890")
   """
-  @spec history(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec history(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :history
 
   @doc """
@@ -43,7 +43,7 @@ defmodule Slack.IM do
       Slack.client(token)
       |> Slack.IM.list
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -56,7 +56,7 @@ defmodule Slack.IM do
       Slack.client(token)
       |> Slack.IM.mark(channel: "D1234567890", ts: 1234567890.123456)
   """
-  @spec mark(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec mark(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :mark
 
   @doc """
@@ -69,6 +69,6 @@ defmodule Slack.IM do
       Slack.client(token)
       |> Slack.IM.open(user: "U1234567890")
   """
-  @spec open(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec open(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :open
 end

@@ -17,6 +17,6 @@ defmodule Slack.API do
       Slack.client(token)
       |> Slack.API.test(foo: "bar")
   """
-  @spec test(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec test(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :test
 end

@@ -16,7 +16,7 @@ defmodule Slack.Group do
 
       Slack.Group.archive(client, channel: "G1234567890")
   """
-  @spec archive(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec archive(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :archive
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Slack.Group do
 
       Slack.Group.close(client, channel: "G1234567890")
   """
-  @spec close(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec close(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :close
 
   @doc """
@@ -40,7 +40,7 @@ defmodule Slack.Group do
 
       Slack.Group.create(client, name: "newchannel")
   """
-  @spec create(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec create(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :create
 
   @doc """
@@ -52,7 +52,7 @@ defmodule Slack.Group do
 
       Slack.Group.createChild(client, channel: "G1234567890")
   """
-  @spec createChild(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec createChild(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :createChild
 
   @doc """
@@ -64,7 +64,7 @@ defmodule Slack.Group do
 
       Slack.Group.history(client, channel: "G1234567890")
   """
-  @spec history(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec history(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :history
 
   @doc """
@@ -76,7 +76,7 @@ defmodule Slack.Group do
 
       Slack.Group.info(client, channel: "G1234567890")
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 
   @doc """
@@ -88,7 +88,7 @@ defmodule Slack.Group do
 
       Slack.Group.invite(client, channel: "G1234567890", user: "U1234567890")
   """
-  @spec invite(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec invite(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :invite
 
   @doc """
@@ -100,7 +100,7 @@ defmodule Slack.Group do
 
       Slack.Group.kick(client, channel: "G1234567890", user: "U1234567890")
   """
-  @spec kick(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec kick(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :kick
 
   @doc """
@@ -112,7 +112,7 @@ defmodule Slack.Group do
 
       Slack.Group.leave(client, channel: "G1234567890")
   """
-  @spec leave(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec leave(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :leave
 
   @doc """
@@ -124,7 +124,7 @@ defmodule Slack.Group do
 
       Slack.Group.list(client)
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -136,7 +136,7 @@ defmodule Slack.Group do
 
       Slack.Group.mark(client, channel: "G1234567890", ts: 1234567890.123456)
   """
-  @spec mark(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec mark(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :mark
 
   @doc """
@@ -148,7 +148,7 @@ defmodule Slack.Group do
 
       Slack.Group.open(client, channel: "G1234567890")
   """
-  @spec open(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec open(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :open
 
   @doc """
@@ -160,7 +160,7 @@ defmodule Slack.Group do
 
       Slack.Group.rename(client, channel: "G1234567890", name: "newname")
   """
-  @spec rename(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec rename(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :rename
 
   @doc """
@@ -172,7 +172,7 @@ defmodule Slack.Group do
 
       Slack.Group.setPurpose(client, channel: "G1234567890", purpose: "purpose")
   """
-  @spec setPurpose(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec setPurpose(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :setPurpose
 
   @doc """
@@ -184,7 +184,7 @@ defmodule Slack.Group do
 
       Slack.Group.setTopic(client, channel: "G1234567890", topic: "topic")
   """
-  @spec setTopic(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec setTopic(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :setTopic
 
   @doc """
@@ -196,6 +196,6 @@ defmodule Slack.Group do
 
       Slack.Group.unarchive(client, channel: "G1234567890")
   """
-  @spec unarchive(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec unarchive(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :unarchive
 end

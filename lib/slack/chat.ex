@@ -17,7 +17,7 @@ defmodule Slack.Chat do
       Slack.client(token)
       |> Slack.Chat.delete(channel: "C1234567890", ts: "1405894322.002768")
   """
-  @spec delete(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec delete(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :delete
 
   @doc """
@@ -30,7 +30,7 @@ defmodule Slack.Chat do
       Slack.client(token)
       |> Slack.Chat.meMessage(channel: "C1234567890", text: "Hello")
   """
-  @spec meMessage(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec meMessage(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :meMessage
 
   @doc """
@@ -43,7 +43,7 @@ defmodule Slack.Chat do
       Slack.client(token)
       |> Slack.Chat.postMessage(channel: "C1234567890", text: "Hello")
   """
-  @spec postMessage(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec postMessage(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :postMessage
 
   @doc """
@@ -57,6 +57,6 @@ defmodule Slack.Chat do
       |> Slack.Chat.postMessage(
            channel: "C1234567890", text: "Hello", ts: "1405894322.002768")
   """
-  @spec update(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec update(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :update
 end

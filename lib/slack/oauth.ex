@@ -17,7 +17,7 @@ defmodule Slack.OAuth do
       Slack.OAuth.access(
         client_id: "client_id", client_secret: "client_secret", code: "code")
   """
-  @spec access(Keyword.t) :: Slack.response
+  @spec access(Keyword.t) :: Slack.slack_response
   defrequest access(params \\ []) do
     Slack.get "#{@base}.access", [], params: params
   end

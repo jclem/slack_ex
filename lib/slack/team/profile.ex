@@ -16,6 +16,6 @@ defmodule Slack.Team.Profile do
 
       Slack.Team.Profile.get(client)
   """
-  @spec get(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec get(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :get
 end
