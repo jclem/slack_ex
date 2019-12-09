@@ -16,7 +16,7 @@ defmodule Slack.Team do
 
       Slack.Team.accessLogs(client)
   """
-  @spec accessLogs(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec accessLogs(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :accessLogs
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Slack.Team do
 
       Slack.Team.billableInfo(client, user: "U1234567890")
   """
-  @spec billableInfo(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec billableInfo(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :billableInfo
 
   @doc """
@@ -40,7 +40,7 @@ defmodule Slack.Team do
 
       Slack.Team.info(client)
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 
   @doc """
@@ -52,6 +52,6 @@ defmodule Slack.Team do
 
       Slack.Team.integrationLogs(client)
   """
-  @spec integrationLogs(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec integrationLogs(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :integrationLogs
 end

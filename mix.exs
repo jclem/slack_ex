@@ -43,8 +43,8 @@ defmodule Slack.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.11"},
-     {:poison, "~> 3.1"},
+    [{:httpoison, "~> 1.4"},
+     {:poison, "~> 3.1 or ~> 4.0"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 

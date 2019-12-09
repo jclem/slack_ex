@@ -16,7 +16,7 @@ defmodule Slack.Search do
 
       Slack.Search.all(client, query: "My query")
   """
-  @spec all(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec all(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :all
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Slack.Search do
 
       Slack.Search.files(client, query: "My query")
   """
-  @spec files(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec files(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :files
 
   @doc """
@@ -40,6 +40,6 @@ defmodule Slack.Search do
 
       Slack.Search.messages(client, query: "My query")
   """
-  @spec messages(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec messages(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :messages
 end

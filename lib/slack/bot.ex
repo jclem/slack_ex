@@ -17,6 +17,6 @@ defmodule Slack.Bot do
       Slack.client(token)
       |> Slack.Bot.info(bot: "B12345678")
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 end

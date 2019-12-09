@@ -16,7 +16,7 @@ defmodule Slack.Star do
 
       Slack.Star.add(client, channel: "C1234567890")
   """
-  @spec add(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec add(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :add
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Slack.Star do
 
       Slack.Star.list(client)
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -41,6 +41,6 @@ defmodule Slack.Star do
 
       Slack.Star.remove(client, channel: "C1234567890")
   """
-  @spec remove(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec remove(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :remove
 end

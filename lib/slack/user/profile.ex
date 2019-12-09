@@ -16,7 +16,7 @@ defmodule Slack.User.Profile do
 
       Slack.User.Profile.get(client, user: "U1234567890")
   """
-  @spec get(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec get(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :get
 
   @doc """
@@ -28,6 +28,6 @@ defmodule Slack.User.Profile do
 
       Slack.User.Profile.set(client, user: "U1234567890", name: "Name")
   """
-  @spec set(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec set(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :set
 end

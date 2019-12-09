@@ -17,7 +17,7 @@ defmodule Slack.File.Comment do
       Slack.client(token)
       |> Slack.File.Comment.add(file: "F1234467890", comment: "Foo")
   """
-  @spec add(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec add(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :add
 
   @doc """
@@ -30,7 +30,7 @@ defmodule Slack.File.Comment do
       Slack.client(token)
       |> Slack.File.Comment.delete(file: "F1234467890", id: "Fc1234567890")
   """
-  @spec delete(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec delete(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :delete
 
   @doc """
@@ -44,6 +44,6 @@ defmodule Slack.File.Comment do
       |> Slack.File.Comment.edit(
            file: "F1234467890", id: "Fc1234567890", comment: "Hello")
   """
-  @spec edit(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec edit(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :edit
 end

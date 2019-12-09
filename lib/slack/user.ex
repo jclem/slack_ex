@@ -16,7 +16,7 @@ defmodule Slack.User do
 
       Slack.User.getPresence(client, user: "U1234567890")
   """
-  @spec getPresence(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec getPresence(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :getPresence
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Slack.User do
 
       Slack.User.identity(client)
   """
-  @spec identity(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec identity(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :identity
 
   @doc """
@@ -40,7 +40,7 @@ defmodule Slack.User do
 
       Slack.User.info(client, user: "U1234567890")
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 
   @doc """
@@ -52,7 +52,7 @@ defmodule Slack.User do
 
       Slack.User.list(client)
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -64,7 +64,7 @@ defmodule Slack.User do
 
       Slack.User.setActive(client)
   """
-  @spec setActive(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec setActive(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :setActive
 
   @doc """
@@ -76,6 +76,6 @@ defmodule Slack.User do
 
       Slack.User.setPresence(client, presence: "away")
   """
-  @spec setPresence(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec setPresence(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :setPresence
 end

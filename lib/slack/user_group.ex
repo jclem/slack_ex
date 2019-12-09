@@ -16,7 +16,7 @@ defmodule Slack.UserGroup do
 
       Slack.UserGroup.create(client, name: "usergroup")
   """
-  @spec create(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec create(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :create
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Slack.UserGroup do
 
       Slack.UserGroup.disable(client, usergroup: "S0604QSJC")
   """
-  @spec disable(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec disable(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :disable
 
   @doc """
@@ -40,7 +40,7 @@ defmodule Slack.UserGroup do
 
       Slack.UserGroup.enable(client, usergroup: "S0604QSJC")
   """
-  @spec enable(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec enable(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :enable
 
   @doc """
@@ -52,7 +52,7 @@ defmodule Slack.UserGroup do
 
       Slack.UserGroup.list(client)
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -64,6 +64,6 @@ defmodule Slack.UserGroup do
 
       Slack.UserGroup.update(client, usergroup: "S0604QSJC", name: "newname")
   """
-  @spec update(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec update(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :update
 end

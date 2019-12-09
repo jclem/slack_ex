@@ -17,7 +17,7 @@ defmodule Slack.File do
       Slack.client(token)
       |> Slack.File.delete(file: "F1234467890")
   """
-  @spec delete(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec delete(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :delete
 
   @doc """
@@ -30,7 +30,7 @@ defmodule Slack.File do
       Slack.client(token)
       |> Slack.File.info(file: "F1234467890")
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 
   @doc """
@@ -43,7 +43,7 @@ defmodule Slack.File do
       Slack.client(token)
       |> Slack.File.list
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -56,7 +56,7 @@ defmodule Slack.File do
       Slack.client(token)
       |> Slack.File.revokePublicURL(file: "F1234467890")
   """
-  @spec revokePublicURL(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec revokePublicURL(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :revokePublicURL
 
   @doc """
@@ -69,7 +69,7 @@ defmodule Slack.File do
       Slack.client(token)
       |> Slack.File.sharedPublicURL(file: "F1234467890")
   """
-  @spec sharedPublicURL(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec sharedPublicURL(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :sharedPublicURL
 
   @doc """
@@ -82,6 +82,6 @@ defmodule Slack.File do
       Slack.client(token)
       |> Slack.File.upload(content: "File contents")
   """
-  @spec upload(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec upload(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :upload
 end

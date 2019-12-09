@@ -1,6 +1,6 @@
 defmodule Slack do
   @moduledoc """
-  A client for the Slack API.
+  A client for the Slack API.
 
   This library exports a module for each namespace on the Slack API. For each
   method in that namespace, a function is exported from its parent module.
@@ -49,7 +49,10 @@ defmodule Slack do
   """
   use HTTPoison.Base
 
-  @type response :: {:ok, map} | {:error, HTTPoison.Response.t} | {:error, HTTPoison.Error.t}
+  @type slack_response ::
+    {:ok, map} |
+    {:error, HTTPoison.Response.t} |
+    {:error, HTTPoison.Error.t}
 
   @endpoint "https://slack.com/api"
 
@@ -57,5 +60,5 @@ defmodule Slack do
 
   def process_url("/" <> url), do: process_url(url)
   def process_url(url), do: "#{@endpoint}/#{url}"
-  defp process_response_body(body), do: Poison.decode!(body)
+  def process_response_body(body), do: Poison.decode!(body)
 end

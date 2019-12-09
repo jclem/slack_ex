@@ -17,7 +17,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.archive(channel: "C1234567890")
   """
-  @spec archive(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec archive(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :archive
 
   @doc """
@@ -30,7 +30,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.create(name: "mychannel")
   """
-  @spec create(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec create(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :create
 
   @doc """
@@ -43,7 +43,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.history(channel: "C1234567890")
   """
-  @spec history(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec history(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :history
 
   @doc """
@@ -56,7 +56,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.info(channel: "C1234567890")
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 
   @doc """
@@ -69,7 +69,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.invite(channel: "C1234567890", user: "U1234567890")
   """
-  @spec invite(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec invite(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :invite
 
   @doc """
@@ -82,7 +82,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.join(channel: "C1234567890")
   """
-  @spec join(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec join(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :join
 
   @doc """
@@ -95,7 +95,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.kick(channel: "C1234567890", user: "U1234567890")
   """
-  @spec kick(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec kick(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :kick
 
   @doc """
@@ -108,7 +108,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.leave(channel: "C1234567890")
   """
-  @spec leave(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec leave(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :leave
 
   @doc """
@@ -121,7 +121,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.list
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -134,7 +134,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.mark(channel: "C1234567890", ts: "1234567890.123456")
   """
-  @spec mark(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec mark(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :mark
 
   @doc """
@@ -147,7 +147,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.rename(channel: "C1234567890", name: "newname")
   """
-  @spec rename(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec rename(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :rename
 
   @doc """
@@ -160,7 +160,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.setPurpose(channel: "C1234567890", purpose: "Purpose")
   """
-  @spec setPurpose(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec setPurpose(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :setPurpose
 
   @doc """
@@ -173,7 +173,7 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.setTopic(channel: "C1234567890", topic: "Topic")
   """
-  @spec setTopic(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec setTopic(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :setTopic
 
   @doc """
@@ -186,6 +186,6 @@ defmodule Slack.Channel do
       Slack.client(token)
       |> Slack.Channel.unarchive(channel: "C1234567890")
   """
-  @spec unarchive(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec unarchive(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :unarchive
 end

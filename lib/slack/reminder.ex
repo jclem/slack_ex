@@ -16,7 +16,7 @@ defmodule Slack.Reminder do
 
       Slack.Reminder.add(client, text: "Walk the dog")
   """
-  @spec add(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec add(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :add
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Slack.Reminder do
 
       Slack.Reminder.complete(client, reminder: "Rm12345678")
   """
-  @spec complete(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec complete(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :complete
 
   @doc """
@@ -40,7 +40,7 @@ defmodule Slack.Reminder do
 
       Slack.Reminder.delete(client, reminder: "Rm12345678")
   """
-  @spec delete(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec delete(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :delete
 
   @doc """
@@ -52,7 +52,7 @@ defmodule Slack.Reminder do
 
       Slack.Reminder.info(client, reminder: "Rm12345678")
   """
-  @spec info(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec info(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :info
 
   @doc """
@@ -64,6 +64,6 @@ defmodule Slack.Reminder do
 
       Slack.Reminder.list(client)
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 end

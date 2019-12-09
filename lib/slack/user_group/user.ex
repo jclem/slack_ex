@@ -16,7 +16,7 @@ defmodule Slack.UserGroup.User do
 
       Slack.UserGroup.list(client, usergroup: "S0604QSJC")
   """
-  @spec list(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec list(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defget :list
 
   @doc """
@@ -29,6 +29,6 @@ defmodule Slack.UserGroup.User do
       Slack.UserGroup.update(
         client, usergroup: "S0604QSJC", user: "U060R4BJ4,U060RNRCZ")
   """
-  @spec update(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec update(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defpost :update
 end

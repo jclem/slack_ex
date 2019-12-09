@@ -17,7 +17,7 @@ defmodule Slack.Auth do
       Slack.client(token)
       |> Slack.Auth.revoke
   """
-  @spec revoke(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec revoke(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defrequest revoke(client, body \\ []) do
     body = body |> Keyword.put(:token, client.token)
     Slack.post "#{@base}.revoke", {:form, body}
@@ -33,7 +33,7 @@ defmodule Slack.Auth do
       Slack.client(token)
       |> Slack.Auth.test
   """
-  @spec test(Slack.Client.t, Keyword.t) :: Slack.response
+  @spec test(Slack.Client.t, Keyword.t) :: Slack.slack_response
   defrequest test(client, body \\ []) do
     body = body |> Keyword.put(:token, client.token)
     Slack.get "#{@base}.test", {:form, body}
